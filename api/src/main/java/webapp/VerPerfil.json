@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Obtener información de perfil de Instagram</title>
+</head>
+<body>
+    <h1>Obtener información de perfil de Instagram</h1>
+    <form action="profile" method="GET">
+        <label for="username">Nombre de usuario:</label>
+        <input type="text" id="username" name="username">
+        <button type="submit">Obtener perfil</button>
+    </form>
+
+    <% if (profile != null) { %>
+        <h2>Perfil de usuario</h2>
+        <p>Nombre de usuario: <%= profile.getUsername() %></p>
+        <p>Seguidores: <%= profile.getFollowers() %></p>
+        <p>Siguiendo: <%= profile.getFollowing() %></p>
+        <!-- Mostrar otros atributos del perfil de Instagram -->
+    <% } %>
+</body>
+</html>
